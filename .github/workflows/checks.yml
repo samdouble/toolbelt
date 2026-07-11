@@ -8,12 +8,10 @@ permissions:
 
 jobs:
   checks:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
-      - name: Commitlint
-        uses: wagoid/commitlint-github-action@v6
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Set up Rust
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
